@@ -9,7 +9,7 @@
   <p>Fib:<span id="val"></span></p>
   <script>
     function calc(num) {
-      WebAssembly.instantiateStreaming(fetch('fib.wasm'))
+      WebAssembly.instantiateStreaming(fetch('fib2.wasm'))
         .then(obj => {
           answer = obj.instance.exports.fib(num);
           document.getElementById('val').innerText = answer;
